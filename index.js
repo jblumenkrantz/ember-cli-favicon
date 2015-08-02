@@ -11,7 +11,7 @@ module.exports = {
   name: 'ember-cli-favicon',
 
   included: function(app) {
-    this.options = app.favicons || {};
+    this.options = app.options.favicons || app.favicons || {};
     this.options.callback = function(html) {
       htmlCache = html;
     };
